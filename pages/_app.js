@@ -7,6 +7,9 @@ import '../styles/styles.css'
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Header>
+        <title>Innovation Week 2021</title>
+      </Header>
       <ThemeProvider theme={customTheme}>
         <CSSReset />
         <Component {...pageProps} />
