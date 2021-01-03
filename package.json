@@ -1,0 +1,29 @@
+{
+  "name": "chakra-ui-next-js",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "npm run build && next export"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^1.1.1",
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "airtable-plus": "^1.0.4",
+    "emotion-theming": "^10.0.27",
+    "framer-motion": "^3.1.1",
+    "geopattern": "^1.2.3",
+    "next": "10.0.0",
+    "nookies": "^2.5.0",
+    "react": "16.13.1",
+    "react-copy-to-clipboard": "^5.0.2",
+    "react-div-100vh": "^0.5.6",
+    "react-dom": "16.13.1",
+    "react-hook-form": "^6.7.0",
+    "react-twemoji": "^0.3.0"
+  }
+}
