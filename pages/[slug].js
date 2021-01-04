@@ -339,7 +339,7 @@ export default function Main(props, context) {
             </Box>
             <Box m={3} p={0}>
               <CopyToClipboard
-                text={`memes.innovweek.co/${props.data.Slug}`}
+                text={`https://memes.innovweek.co/${props.data.Slug}`}
                 onCopy={() =>
                   toast({
                     title: "Copied!",

@@ -1,6 +1,4 @@
-const AirtablePlus = require("airtable-plus");
-
-export default async function handler(req, res) {
+x
   const airtable = new AirtablePlus({
     baseID: "appCsa76vWjxslcuB",
     apiKey: process.env.AIRTABLE,

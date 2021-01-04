@@ -5,6 +5,10 @@
     {
       "source": "/new",
       "destination": "https://airtable.com/shrx6RdVt4YBMmgLR"
+    },
+    {
+      "source": "/(.+).png",
+      "destination": "/api/images/$1"
     }
   ]
 }
