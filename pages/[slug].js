@@ -60,7 +60,7 @@ export default function Main(props, context) {
             <Box bg="white" color="black" m={3} p={3} borderRadius={5}>
               <Text>
                 Congratulations, you scanned a QR code to a{" "}
-                {props.data["Filter Desc."]} Jerry the Jaguar selfie filter?
+                {props.data["Filter Desc."]} Jerry the Jaguar selfie filter!
                 Take a selfie or wefie to possibly earn extra points for your
                 house!
               </Text>
