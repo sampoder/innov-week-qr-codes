@@ -1,0 +1,10 @@
+{
+  "github": { "silent": true },
+  "redirects": [
+    { "source": "/", "destination": "https://innovweek.co" },
+    {
+      "source": "/new",
+      "destination": "https://airtable.com/shrx6RdVt4YBMmgLR"
+    }
+  ]
+}
