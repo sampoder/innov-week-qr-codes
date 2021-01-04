@@ -366,34 +366,14 @@ export default function Main(props, context) {
   }
 }
 
-export async function getStaticPaths() {
-  const AirtablePlus = require("airtable-plus");
-  const airtable = new AirtablePlus({
-    baseID: "appCsa76vWjxslcuB",
-    apiKey: process.env.AIRTABLE,
-    tableName: "Table 1",
-  });
-
-  let data = await airtable.read({});
-
-  data = data.map(({ id, fields }) => ({
-    params: { slug: id }
-  }))
-  console.log(data)
-  return {
-    paths: data,
-    fallback: true,
-  };
-}
-
-export async function getStaticProps({ params }, context) {
+export async function getServerSideProps(context) {
   const AirtablePlus = require("airtable-plus");
 
   const cookies = parseCookies(context);
 
   let cookiedetected = false;
 
-  if (cookies[params.slug]) {
+  if (cookies[context.query.slug]) {
     cookiedetected = true;
   }
 
@@ -404,11 +384,11 @@ export async function getStaticProps({ params }, context) {
   });
 
   const data = await airtable.read({
-    filterByFormula: `Slug = "${params.slug}"`,
+    filterByFormula: `Slug = "${context.query.slug}"`,
     maxRecords: 1,
   });
 
   console.log(data);
 
-  return { props: { data: data[0].fields, cookiedetected }, revalidate: 60 };
+  return { props: { data: data[0].fields, cookiedetected } };
 }
