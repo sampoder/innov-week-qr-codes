@@ -158,9 +158,11 @@ export default function Main(props, context) {
                 {correct == 0
                   ? props.data["Quiz: Question"]
                   : correct == 1
-                  ? `Congrats! That is correct. ${
+                  ? `${pointssent == 0 ? "Congrats! That is correct." : ""} ${
                       props.cookiedetected == false
-                        ? "We'd love to send you 5 house points as a prize for your victory, please let us know your house."
+                        ? pointssent == 0
+                          ? "We'd love to send you 5 house points as a prize for your victory, please let us know your house."
+                          : "Awesome! Just sent over those House Points! Can't wait to see you again soon :)"
                         : ""
                     }`
                   : pointssent == 0
