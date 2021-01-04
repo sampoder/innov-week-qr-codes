@@ -408,7 +408,7 @@ export async function getStaticProps({ params }, context) {
     maxRecords: 1,
   });
 
-  // console.log(data);
+  console.log(data);
 
   return { props: { data: data[0].fields, cookiedetected }, revalidate: 60 };
 }
