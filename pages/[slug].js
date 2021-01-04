@@ -379,6 +379,7 @@ export async function getStaticPaths() {
   data = data.map(({ id, fields }) => ({
     params: { slug: id }
   }))
+  console.log(data)
   return {
     paths: data,
     fallback: true,
@@ -407,7 +408,7 @@ export async function getStaticProps({ params }, context) {
     maxRecords: 1,
   });
 
-  console.log(data);
+  // console.log(data);
 
   return { props: { data: data[0].fields, cookiedetected }, revalidate: 60 };
 }
