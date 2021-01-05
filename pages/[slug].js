@@ -15,7 +15,7 @@ import {
 import Twemoji from "react-twemoji";
 import Events from "../config";
 import Head from "../components/meta";
-import Div100vh from "react-div-100vh";
+import Div100vh from "../components/100vh";
 const GeoPattern = require("geopattern");
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useState, useEffect } from "react";
